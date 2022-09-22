@@ -1,16 +1,19 @@
 /*
 vždy sa začína postupne, prvý zoznam (ol.mainlist) potom prvok li, v tom prvku je zase podzozham (ol.sublist) a tam ten prvok ktorý chcem upraviť li:first-child
  */
-ol.mainlist li ol.sublist li:first-child{
+ul.mainlist li ul.sublist li:first-child{
     color: red;
 }
-ol.mainlist li ol.sublist li:last-child{
+ul.mainlist li ul.sublist li:last-child{
     color: green;
 }
-ol.mainlist li:nth-child(2) ol.sublist{
+ul.mainlist li:nth-child(2) ul.sublist{
     color:orange;
 }
 
-ol.mainlist span:hover + ol.sublist {
+ul.mainlist span:hover + ul.sublist {
     background-color: green;
+}
+ul {
+    list-style-image: url("img.png");
 }
