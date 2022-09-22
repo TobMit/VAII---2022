@@ -1,0 +1,9 @@
+/*
+vždy sa začína postupne, prvý zoznam (ol.mainlist) potom prvok li, v tom prvku je zase podzozham (ol.sublist) a tam ten prvok ktorý chcem upraviť li:first-child
+ */
+ol.mainlist li ol.sublist li:first-child{
+    color: red;
+}
+ol.mainlist li ol.sublist li:last-child{
+    color: green;
+}
