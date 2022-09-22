@@ -7,3 +7,10 @@ ol.mainlist li ol.sublist li:first-child{
 ol.mainlist li ol.sublist li:last-child{
     color: green;
 }
+ol.mainlist li:nth-child(2) ol.sublist{
+    color:orange;
+}
+
+ol.mainlist span:hover + ol.sublist {
+    background-color: green;
+}
