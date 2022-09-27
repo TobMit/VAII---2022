@@ -1,0 +1,35 @@
+.table {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: darkgreen;
+    border: 5px solid black;
+}
+
+.ball {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: red;
+    border-radius: 50%;
+    border: 1px  solid black;
+    animation: y_axis 3.3s linear alternate infinite, x_axis 1.5s linear alternate infinite;
+}
+
+@keyframes y_axis {
+    from {
+        top: 0;
+    }
+    to {
+        top: 270px;
+    }
+}
+
+@keyframes x_axis {
+    from {
+        left: 0;
+    }
+    to {
+        left: 470px;
+    }
+}
