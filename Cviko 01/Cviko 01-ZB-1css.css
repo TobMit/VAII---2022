@@ -1,0 +1,38 @@
+body {
+    background-image: url("obloha.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.sun {
+    background-image: url("sun.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 256px;
+    width: 256px;
+}
+
+.bird {
+    background-image: url("bird.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.right {
+    right: 0;
+}
+.left{
+    transform: scaleX(-1);
+}
+.bottom {
+    bottom: 0;
+}
