@@ -49,6 +49,22 @@
         td:nth-child(7), th:nth-child(7) {
             display: none;
         }
+
+        a[href*="http"] {
+            color: red;
+        }
+
+        a[href*="https"] {
+            color: green;
+        }
+
+        a {
+            color: blue;
+        }
+        a[href*=".pdf"]:after {
+            content: "(PDF)";
+        }
+
     </style>
 </head>
 <body>
