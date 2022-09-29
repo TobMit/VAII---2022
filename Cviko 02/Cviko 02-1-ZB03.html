@@ -15,6 +15,38 @@
         th:first-letter {
             color: yellow;
         }
+
+        tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+        td:nth-child(2) {
+            text-transform: uppercase;
+        }
+
+        tr:hover{
+            background-color: silver;
+
+        }
+        tr:hover td:nth-child(1) {
+            color: red;
+        }
+        tr:hover td:nth-child(1):hover {
+            color: black;
+        }
+
+        tr:hover td:nth-child(n+4):not(td:nth-child(n+7)) {
+            text-align: center;
+            background-color: dodgerblue;
+        }
+
+        tr:hover td:nth-child(n+4):not(td:nth-child(n+7)):hover{
+            background-color: green;
+        }
+        tr:hover td:nth-child(n+4):not(td:nth-child(n+7)):hover ~ td:not(td:nth-child(n+7)){
+            background-color: orange;
+        }
+
+
     </style>
 </head>
 <body>
@@ -67,7 +99,7 @@
         <td>23</td>
         <td>22</td>
         <td>0</td>
-        <td><a href="Cviko 02-1-ZB03.html>Relativny link</a></td>
+        <td><a href="Cviko 02-1-ZB03.html">Relativny link</a></td>
     </tr>
     <tr>
         <td>Svatoslav</td>
@@ -77,7 +109,7 @@
         <td>975</td>
         <td>8</td>
         <td>1</td>
-        <td><a href="/subor.pdf">Relativny link</a></td>
+        <td><a href="bird.png">Relativny link</a></td>
     </tr>
     <tr>
         <td>Michal</td>
