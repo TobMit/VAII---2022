@@ -11,3 +11,9 @@
     color: rgba(178,178,178,0.48);
 }
 
+#mojContajner .row p {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
