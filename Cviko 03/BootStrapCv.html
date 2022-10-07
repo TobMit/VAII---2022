@@ -40,7 +40,7 @@
   </nav>
   </header>
 
-<div class="container-md" id="mojContajner">
+  <div class="container-md" id="mojContajner">
   <div class="row">
     <p>Lorem Ipsum voluptatum convenire constituam metus constituto venenatis ubique conclusionemque. Nec tempus gubergren an augue. Consetetur felis platea expetenda tale affert. Ubique dignissim malesuada sodales solet definitionem. Velit maecenas vero scripserit ancillae bibendum utinam dolores.</p>
   </div>
@@ -77,6 +77,15 @@
   </div>
 
   <div class="row">
+    <div class="container mb-2">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-4">
       <p class="text-bg-success">Lorem Ipsum voluptatum convenire constituam metus constituto venenatis ubique conclusionemque. Nec tempus gubergren an augue. Consetetur felis platea expetenda tale affert. Ubique dignissim malesuada sodales solet definitionem. Velit maecenas vero scripserit ancillae bibendum utinam dolores.</p>
     </div>
@@ -89,6 +98,47 @@
   </div>
 </div>
 
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+          <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-5 pt-0">
+          <form class="">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+            <hr class="my-4">
+            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+            <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
+              Sign up with Twitter
+            </button>
+            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+              Sign up with Facebook
+            </button>
+            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
+              Sign up with GitHub
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
+
 </html>
