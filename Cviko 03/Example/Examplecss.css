@@ -1,0 +1,11 @@
+#myNav {
+    background-color: gray;
+}
+
+#myNav .nav-item .nav-link {
+    color: #FFF;
+}
+
+#column-texts {
+    text-align: justify;
+}

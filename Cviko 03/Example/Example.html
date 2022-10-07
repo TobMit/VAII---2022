@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light nav-f" id="myNav">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse top_nav pt-sm-2" id="navbarSupportedContent">
+        <a class="navbar-brand img-fluid" rel="home" href="#" title="Buy Sell Rent Everyting">
+          <img style="max-width:100px;"
+               src="https://img.favpng.com/6/13/25/random-icons-png-favpng-48dZQ9PzjZA9quEmMKtG90Rwn.jpg">
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item "><a href="#" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item "><a href="#" class="nav-link">Support</a>
+          </li>
+          <li class="nav-item "><a href="#" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div id="hero-text" class="container-sm">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu posuere felis. Pellentesque tincidunt nunc a arcu rutrum, et lacinia diam ultrices. Vestibulum semper id libero quis efficitur. Sed aliquet fringilla sodales. Quisque ut dui eu nulla dignissim posuere vel in lorem. Sed euismod dolor vitae suscipit tincidunt. Cras cursus leo ut elit venenatis lacinia. Aliquam iaculis purus nec lacinia lobortis.</p>
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="buttons" class="container mb-2">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Primary</button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Secondary</button>
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Success</button>
+  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Danger</button>
+  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Warning</button>
+  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Info</button>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="column-texts">
+  <div class="row align-items-start">
+    <div class="col-12 col-md-4 mb-4 bg-primary">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu posuere felis. Pellentesque tincidunt nunc a arcu rutrum, et lacinia diam ultrices. Vestibulum semper id libero quis efficitur. Sed aliquet fringilla sodales. Quisque ut dui eu nulla dignissim posuere vel in lorem. Sed euismod dolor vitae suscipit tincidunt. Cras cursus leo ut elit venenatis lacinia. Aliquam iaculis purus nec lacinia lobortis.
+    </div>
+    <div class="col-12 col-md-4 mb-4 bg-danger">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu posuere felis. Pellentesque tincidunt nunc a arcu rutrum, et lacinia diam ultrices. Vestibulum semper id libero quis efficitur. Sed aliquet fringilla sodales. Quisque ut dui eu nulla dignissim posuere vel in lorem. Sed euismod dolor vitae suscipit tincidunt. Cras cursus leo ut elit venenatis lacinia. Aliquam iaculis purus nec lacinia lobortis.
+    </div>
+    <div class="col-12 col-md-4 mb-4 bg-success">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu posuere felis. Pellentesque tincidunt nunc a arcu rutrum, et lacinia diam ultrices. Vestibulum semper id libero quis efficitur. Sed aliquet fringilla sodales. Quisque ut dui eu nulla dignissim posuere vel in lorem. Sed euismod dolor vitae suscipit tincidunt. Cras cursus leo ut elit venenatis lacinia. Aliquam iaculis purus nec lacinia lobortis.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
