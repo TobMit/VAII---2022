@@ -10,9 +10,9 @@ if (isset($_POST['text'])) {
     $newPost->text = $_POST['text'];
 
     if (isset($_FILES['img']) && $_FILES['img']['error'] == UPLOAD_ERR_OK){  //kotnrolujeme či sa spárvne nahral súbor
-        $newName = "img" . DIRECTORY_SEPARATOR . time() . "_" . $_FILES["fileToUpload"]["name"]; // dávame súboru prefix, aby nedošlo ku kolízií
-        if (move_uploaded_file($_FILES["fileToUpload"]["name"], $newName)) {
-            $newName->file = $newName;
+        $newName = "img" . DIRECTORY_SEPARATOR . time() . "_" . $_FILES["img"]["name"]; // dávame súboru prefix, aby nedošlo ku kolízií
+        if (move_uploaded_file($_FILES["img"]["tmp_name"], $newName)) {
+            $newPost->file = $newName;
         }
     }
 
@@ -46,9 +46,12 @@ if (isset($_POST['text'])) {
             </div>
 
             <div>
-                <form method="post">
+                <!-- musí tam byť multipar inak by sa request neoddeli od textových častí -->
+                <form method="post" enctype="multipart/form-data">
+
                     <input type="text" name="text" placeholder="Tu napiš spravu">
-                    <input type="file" name="image">
+                    <input type="file" name="img">
+
                     <input type="submit" value="Odoslať">
                 </form>
             </div>
