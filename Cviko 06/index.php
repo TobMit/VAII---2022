@@ -8,6 +8,14 @@ $db = new DB();
 if (isset($_POST['text'])) {
     $newPost = new Post();
     $newPost->text = $_POST['text'];
+
+    if (isset($_FILES['img']) && $_FILES['img']['error'] == UPLOAD_ERR_OK){  //kotnrolujeme či sa spárvne nahral súbor
+        $newName = "img" . DIRECTORY_SEPARATOR . time() . "_" . $_FILES["fileToUpload"]["name"]; // dávame súboru prefix, aby nedošlo ku kolízií
+        if (move_uploaded_file($_FILES["fileToUpload"]["name"], $newName)) {
+            $newName->file = $newName;
+        }
+    }
+
     $db->storePost($newPost);
 }
 
@@ -40,6 +48,7 @@ if (isset($_POST['text'])) {
             <div>
                 <form method="post">
                     <input type="text" name="text" placeholder="Tu napiš spravu">
+                    <input type="file" name="image">
                     <input type="submit" value="Odoslať">
                 </form>
             </div>
