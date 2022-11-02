@@ -26,9 +26,9 @@ class DB
 
     public function storePost(Post $post)
     {
-        $sql = "INSERT INTO posts (text) VALUES (?)";
+        $sql = "INSERT INTO posts (text, file) VALUES (?, ?)";
         $stmt= $this->pdo->prepare($sql);
-        $stmt->execute([$post->text]);
+        $stmt->execute([$post->text, $post->file]);
     }
 
 }
