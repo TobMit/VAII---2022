@@ -9,9 +9,13 @@ class DB
 
     public function __construct()
     {
-        $this->pdo = new PDO('mysql:host=localhost;dbname=instac', "root", "heslo");
+        //tuto musí byť namiesto localhost iba db pretože docker-compose.yml hovorí že je prístup k databáze cez db
+        $this->pdo = new PDO('mysql:host=db;dbname=instac', "root", "heslo");
     }
 
+    /**
+     * @return Post[]
+     */
     public function getAllPos()
     {
         $stm = $this->pdo->query("SELECT * FROM posts");
