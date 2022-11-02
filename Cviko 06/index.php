@@ -5,6 +5,12 @@ include "DB.php";
 
 $db = new DB();
 
+if (isset($_POST['text'])) {
+    $newPost = new Post();
+    $newPost->text = $_POST['text'];
+    $db->storePost($newPost);
+}
+
 ?> <html lang="en">
 <head>
 
@@ -22,7 +28,7 @@ $db = new DB();
 </div>
 
 <div>
-    <form>
+    <form method="post">
         <input type="text" name="text" placeholder="Tu napiš spravu">
         <input type="submit" value="Odoslať">
     </form>
