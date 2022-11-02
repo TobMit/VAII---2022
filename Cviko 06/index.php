@@ -5,7 +5,7 @@ include "DB.php";
 
 $db = new DB();
 
-?> <html>
+?> <html lang="en">
 <head>
 
 
@@ -13,13 +13,19 @@ $db = new DB();
 <body>
 
 <div class="posts-container">
-    jjflajldjfa
     <?php foreach ($db->getAllPos() as $post) { ?>
     <div class="post">
-        <?php $post->text ?>
+        <?php echo $post->text ?>
     </div>
 
     <?php } ?>
+</div>
+
+<div>
+    <form>
+        <input type="text" name="text" placeholder="Tu napiš spravu">
+        <input type="submit" value="Odoslať">
+    </form>
 </div>
 
 </body>
