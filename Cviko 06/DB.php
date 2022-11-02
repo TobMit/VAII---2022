@@ -13,6 +13,7 @@ class DB
         $this->pdo = new PDO('mysql:host=db;dbname=instac', "root", "heslo");
     }
 
+    //toto sa sem musí pridať aby to vedel auto complete rozpoznávalo a nerobilo problémi
     /**
      * @return Post[]
      */
