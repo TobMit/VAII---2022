@@ -33,8 +33,10 @@ if (isset($_POST['text'])) {
         <div class="offset-4 col-4">
             <div class="posts-container m-4">
                 <?php foreach ($db->getAllPos() as $post) { ?>
-                    <div class="card mb-4" style="width: 18rem;">
-<!--                        <img src="..." class="card-img-top" alt="...">-->
+                    <div class="card mb-4">
+                        <?php if ($post->file) { ?>
+                        <img src="<?php echo $post->file?>" class="card-img-top" alt="...">
+                        <?php } ?>
                         <div class="card-body">
 <!--                            <h5 class="card-title">Card title</h5>-->
                             <p class="card-text"><?php echo $post->text ?></p>
