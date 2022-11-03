@@ -33,7 +33,7 @@ class DB
 
     public function remove($id)
     {
-        $sql = $this->pdo->query("DELETE FROM posts WHERE id = ?");
+        $sql = "DELETE FROM posts WHERE id = ?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$id]);
     }
