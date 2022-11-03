@@ -5,6 +5,10 @@ include "DB.php";
 
 $db = new DB();
 
+if (isset($_GET['delete'])) {
+    $db->remove($_GET['delete']);
+}
+
 if (isset($_POST['text'])) {
     $newPost = new Post();
     $newPost->text = $_POST['text'];
