@@ -40,7 +40,7 @@ if (isset($_POST['text'])) {
                         <div class="card-body">
 <!--                            <h5 class="card-title">Card title</h5>-->
                             <p class="card-text"><?php echo $post->text ?></p>
-<!--                            <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                            <a href="?delete=<?php echo $post->id ?>" class="btn btn-danger">Vymaz</a>
                         </div>
                     </div>
 
