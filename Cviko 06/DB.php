@@ -33,6 +33,18 @@ class DB
 
     public function remove($id)
     {
+        $stm = $this->pdo->prepare("SELECT * FROM posts WHERE id = ?");
+        $stm->execute([$id]);
+        //budeme sa spoliehať že to vráti iba jeden záznam
+
+        /** @var Post $vysledok */
+        $vysledok = $stm->fetchAll(PDO::FETCH_CLASS, Post::class)[0];
+
+        if ($vysledok->file) {
+            unlink($vysledok->file);
+        }
+
+
         $sql = "DELETE FROM posts WHERE id = ?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$id]);
