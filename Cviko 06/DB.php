@@ -48,6 +48,8 @@ class DB
         $sql = "DELETE FROM posts WHERE id = ?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$id]);
+
+        header("Location: ?"); // vymaže parametre z url
     }
 
 }
