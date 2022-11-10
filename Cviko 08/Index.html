@@ -6,8 +6,19 @@
 <!--  <script src="js.js" type="application/javascript"> takto môže byť deklarovaná hlavička keď je js v súbore -->
   <script>
     function ff() {
-      let spans = document.querySelectorAll("");
+      let spans = document.querySelectorAll("[data-tooltip]");
+      for (let span of spans) {
+        span.onmouseenter = function () {
+            let text = this.getAttribute("data-tooltip");
+            span.innerHTML = "<span>" + text + "</span>";
+        };
+        span.onmouseleave = function () {
+            this.firstElementChild.remove();
+        }
+      }
     }
+
+    window.onload = ff();
   </script>
   <style>
     span span {
@@ -35,7 +46,6 @@
       relatívne uzavretý myšlienkový
       <span data-tooltip="dfajflajfajlfjaldjaljflajf">
         komplex
-        <span>dfajflajfajlfjaldjaljflajf</span>
       </span>
       Je to semiotická entita,
       Text je jazykovo-tematická
