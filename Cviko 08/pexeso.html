@@ -3,8 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Pexeso</title>
+    <script>
+        function f() {
+            let karty = [1, 2, 3, 4, 5,];
+            let plocha = document.getElementById("plocha");
+            for (let cislo of karty) {
+
+                plocha.innerHTML += '<div class="karta">' + cislo +' </div>'
+                plocha.innerHTML += '<div class="karta">' + cislo +' </div>'
+
+            }
+
+            let c = document.querySelectorAll(".karta");
+            for (let i = 0; i < 5; i++) {
+                let index = Math.floor(Math.random() * c.length);
+                plocha.appendChild(c[index]);
+            }
+
+            for (let karta of c) {
+                karta.onclick = function () {
+                    if (this.style.backgroundColor == "") {
+                        this.style.backgroundColor = "white";
+                    } else {
+                        this.style.backgroundColor = "";
+                    }
+                }
+            }
+
+
+        }
+
+        window.onload = f;
+    </script>
+    <style>
+        .karta {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            padding: 3px;
+            margin: 3px;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-
+<div id = plocha></div>
 </body>
 </html>
