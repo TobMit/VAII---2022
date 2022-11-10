@@ -5,12 +5,13 @@
     <title>Cviko 08</title>
 <!--  <script src="js.js" type="application/javascript"> takto môže byť deklarovaná hlavička keď je js v súbore -->
   <script>
+
     function ff() {
       let spans = document.querySelectorAll("[data-tooltip]");
       for (let span of spans) {
         span.onmouseenter = function () {
             let text = this.getAttribute("data-tooltip");
-            span.innerHTML = "<span>" + text + "</span>";
+            span.innerHTML += "<span>" + text + "</span>";
         };
         span.onmouseleave = function () {
             this.firstElementChild.remove();
