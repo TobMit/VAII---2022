@@ -1,6 +1,10 @@
 class Chat {
     constructor() {
         this.msgElement = document.getElementById("messages");
+        this.inputChat = document.getElementById("chadTesxt");
+        this.btnChatSend = document.getElementById("chadTlacitko");
+
+        thi
     }
 
     async getMessages() {
@@ -17,6 +21,14 @@ class Chat {
         setTimeout(() => {
             this.getMessages();
         }, 1000);
+    }
+
+    async sendMesage() {
+        let d = await fetch('?c=api&a=savemessage', {
+           method: 'Post',
+            headers: "someting treba googlit",
+           body:  "message +=" + this.inputChat.value
+        });
     }
 }
 var chat;
